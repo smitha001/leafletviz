@@ -1,0 +1,44 @@
+{
+  "supportsLandingPage": true,
+  "supportsEmptyDataView": true,
+  "privileges": [
+    {
+      "name": "WebAccess",
+      "essential": true,
+      "parameters": [
+        "https://*.microsoft.com",
+        "http://*.microsoft.com",
+        "https://*.openstreetmap.org",
+        "http://*.openstreetmap.org",
+        "https://*.leafletjs.com",
+        "http://*.leafletjs.com",
+        "https://*.osm.org",
+        "http://*.osm.org",
+        "https://localhost",
+        "http://localhost",
+        "https://*.w3.org",
+        "http://*.w3.org",
+        "https://ags.coverlab.org",
+        "https://*.cartocdn.com",
+        "http://*.cartocdn.com",
+        "https://*.arcgis.com",
+        "http://*.arcgis.com",
+        "https://server.arcgisonline.com",
+        "http://server.arcgisonline.com",
+		"https://*.abs.gov.au"
+      ]
+    }
+  ],
+  "dataRoles": [
+    { "name": "saones",      "kind": "Grouping", "displayName": "SA1s then Names" },
+    { "name": "score",    "kind": "Measure",  "displayName": "Percent" }
+  ],
+  "dataViewMappings": [
+    {
+      "categorical": {
+        "categories": { "for": { "in": "saones" }}, 
+        "values": { "for": { "in": "score" }} 
+	  }
+	}
+  ]
+}
